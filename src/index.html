@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discord Video Converter</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="top_bar">
+      <div id="top_bar_left">
+        <button id="compress" onclick="menu(0);">Compress</button>
+        <button id="settings" onclick="menu(1);">Settings</button>
+        <button id="about" onclick="menu(2);">About</button>
+      </div>
+      <div id="top_bar_right">
+        <button id="minimalize" onclick="minimize()">_</button>
+        <button id="close" onclick="close_app()">X</button>
+      </div>
+    </div>
+    <div id="content">
+      <div id="menu0" class="menu">
+        <div id="finished_info">Finished</div>
+        <div id="error_info">algorithm Error has occurred...</div>
+        <div class="content-text" id="content_text">Select or Drop mp4 file to compress it for Discord non-nitro</div>
+        <button id="choose_button" onclick="file_select()">Choose file...</button>
+      </div>
+      <div id="menu1" class="menu">
+        <div class="content-text">No settings for now</div>
+      </div>
+      <div id="menu2" class="menu">
+        <div class="content-text2">App made by <b>Tomasz Lipczyński</b></div>
+        <div class="content-text-line">In the name of YOUR FILES ARE TOO POWERFUL</div>
+        <div class="content-text-line"><b>vlipczynski@gmail.com</b><a href="mailto:vlipczynski@gmail.com"><img src="svg/mail.webp"/></a></div>
+        <div class="content-text-line"><b>vlipczynski.com</b><button onclick='goToUrl("https://vlipczynski.com/")'><img id="web_icon" src="svg/web.svg"/></button></div>
+        <div class="content-text-line" id="version">ver 1.2 (11 April 2022)</div>
+      </div>
+      <div id="menu3" class="menu">
+        <div class="content-text2" id="status_info" style="text-align: center !important;"><b>Converting in progress...</b></div>
+        <div class="content-text-line" style="font-size: 14px !important;">File: <b id="file_name"></b></div>
+        <div class="content-text-line" style="font-size: 14px !important;">Output File: <b id="new_file_name"></b></div>
+        <div class="content-text-line" style="font-size: 14px !important;">Will be rendered at the same folder</div>
+        <div class="content-text-line" style="font-size: 11px !important;">(if program stuck at end of 1/2: delete *_discord.mp4 render of your file and restart the program)</div>
+      </div>
+    </div>
+  
+    <script src="functions.js"></script>
+  </body>
+</html>
